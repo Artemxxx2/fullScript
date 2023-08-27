@@ -269,9 +269,11 @@ for el in variable:
     user = os.getenv("DB_USER")
     password = os.getenv("DB_PASSWORD")
     database = os.getenv("DB_DATABASE")
+    port = os.getenv("DB_PORT")
 
     try:
         connection = mysql.connector.connect(
+            port = port,
             host=host,
             user=user,
             password=password,
